@@ -80,7 +80,7 @@ class ServiceController < ApplicationController
 
             new_problem.save!
 
-            render json: { :res => RES_SUCCESS, :case_id => new_problem.id }
+            render json: { :res => RES_SUCCESS, :problem_id => new_problem.id }
             return
         rescue => e
             logger.error(e)
