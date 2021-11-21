@@ -6,6 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-engineer = Engineer.create(id: 1, no: 'engineer001', name: 'bigbro', description: 'The smart & handsome guy')
-# engineer.save!
-puts engineer.to_json
+Engineer.create!(id: 1, no: 'engineer001', name: 'bigbro', description: 'The smart & handsome guy')
+
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
